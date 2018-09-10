@@ -1,0 +1,84 @@
+# ETIQUETAS HTML
+'.text.html.basic':
+  'Tabla simple':
+    'prefix': 'tabla'
+    'body': """
+<table>
+  <tr>
+    <th>$1Firstname</th>
+    <th>Lastname</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+</table>
+""" # end tabla
+ 'Comentario en HTML':
+   'prefix': 'comentario'
+   'body': '<!-- $1 -->'#end comentario
+  'template materialize online':
+    'prefix': 'html materialize'
+    'body': """
+<!DOCTYPE html>
+  <html lang="es">
+    <head>
+      <meta charset="UTF-8">
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!-- Import compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+      <!-- Import sweet alert -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.26.28/sweetalert2.min.css">
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.26.28/sweetalert2.min.js"></script>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>Titulo de la pagina</title>
+    </head>
+    <body>
+      $1
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+      <!-- JQuery -->
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    </body>
+  </html>
+  """
+ # CODIGO JAVASCRIPT
+'.source.js':
+  'Document Ready':
+    'prefix': 'ready'
+    'body': """
+$(funcion(){
+  $1
+});
+"""
+#CODIGO PHP
+'.text.html.php':
+  'Insert':
+    'prefix': 'guardar'
+    'body': """
+$ins = $con->query("INSERT INTO $1mitabla VALUES('') ");
+"""
+  'Update':
+    'prefix': 'actualizar'
+    'body': """
+$up = $con->query("UPDATE mitabla SET micampo ='' WHERE id='' ");
+"""
+  'Select':
+    'prefix': 'seleccionar'
+    'body': """
+$sel = $con->query("SELECT * FROM mitabla ");
+"""
+  'Delete':
+    'prefix': 'borrar'
+    'body': """
+$del = $con->query("DELETE FROM mitabla FROM id='' ");
+"""
