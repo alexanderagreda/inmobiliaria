@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+  <html lang="es">
+    <head>
+      <meta charset="UTF-8">
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!-- Import compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+      <!-- Import sweet alert -->
+
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>Barra de navegación</title>
+    </head>
+    <body>
+      <!-- Dropdown Structure -->
+      <ul id="menu-desplegable" class="dropdown-content">
+        <li><a href="#">La entidad</a></li>
+        <li class="divider"></li>
+        <li><a href="#">Organigrama</a></li>
+        <li class="divider"></li>
+        <li><a href="#">Directorio institucional</a></li>
+      </ul>
+      <!-- END Dropdown Structure -->
+
+      <!-- NAV BAR -->
+      <div class="navbar-fixed">
+        <nav class="cyan darken-1">
+          <div class="container">
+            <div class="nav-wrapper">
+              <a href="#" class="brand-logo">Salud</a>
+              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li class="active"><a href="#">Inicio</a></li>
+                <!-- Dropdown Trigger -->
+                <li><a class="dropdown-trigger" href="#" data-target="menu-desplegable">Nosotros<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a href="#">Noticias</a></li>
+                <li><a href="#">Contactenos</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- END NAV BAR -->
+
+      <!-- NAV MOBILE  -->
+      <ul class="sidenav" id="mobile-demo">
+        <li class="active"><a href="#">Inicio</a></li>
+        <li><a href="#">Nosotros</a></li>
+        <li><a href="#">Noticias</a></li>
+        <li><a href="#">Contactenos</a></li>
+      </ul>
+      <!-- END NAV MOBILE  -->
+
+
+      <div class="row">
+        <div class="col s12">
+          <div class="card">
+            <div class="card-content">
+              <span class="card-title">Titulo</span>
+              <p>Contenido</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s12">
+          <div class="card">
+            <div class="card-content">
+              <span class="card-title">Titulo</span>
+              <p>Contenido</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s12">
+          <div class="card">
+            <div class="card-content">
+              <span class="card-title">Titulo</span>
+              <p>Contenido</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s12">
+          <div class="card">
+            <div class="card-content">
+              <span class="card-title">Titulo</span>
+              <p>Contenido</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s12">
+          <div class="card">
+            <div class="card-content">
+              <span class="card-title">Titulo</span>
+              <p>Contenido</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- JQuery -->
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+      <script type="text/javascript">
+        $(function(){
+          $('.sidenav').sidenav();
+          $(".dropdown-trigger").dropdown({hover: true, coverTrigger: false, closeOnClick: true});
+        });
+      </script>
+    </body>
+</html>
