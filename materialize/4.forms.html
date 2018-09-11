@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+  <html lang="es">
+    <head>
+      <meta charset="UTF-8">
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!-- Import compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+      <link rel="stylesheet" href="master.css">
+      <!-- Import sweet alert -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.26.28/sweetalert2.min.css">
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.26.28/sweetalert2.min.js"></script>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>Titulo de la pagina</title>
+    </head>
+    <body>
+      <div class="row">
+        <div class="col s12">
+          <div class="card">
+            <div class="card-content">
+              <span class="card-title">FORMULARIOS</span>
+                <div class="input-field s12">
+                  <input type="text" name="nombre" value="">
+                  <label for="nombre">Nombre</label>
+                </div>
+                <div class="input-field s12">
+                  <input type="email" name="correo" value="" class="validate">
+                  <label for="correo">Correo electrónico</label>
+                  <span class="helper-text" data-error="Incorrecto" data-success="Correcto"></span>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- JQuery -->
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+      <script type="text/javascript">
+        $(function(){
+          M.updateTextFields();
+
+        });
+      </script>
+    </body>
+</html>
