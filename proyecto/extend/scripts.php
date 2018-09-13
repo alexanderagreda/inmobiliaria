@@ -5,3 +5,6 @@
   <script type="text/javascript" src="../js/materialize.min.js"></script>
   <!--3. Import sweetalert2.js-->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.26.28/sweetalert2.js"></script>
+  <script type="text/javascript">
+    $('.sidenav').sidenav();
+  </script>

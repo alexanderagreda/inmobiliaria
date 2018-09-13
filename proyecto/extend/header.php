@@ -11,8 +11,19 @@
     <link rel="stylesheet" href="../css/materialize.min.css">
     <!--Import sweetalert2.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.26.28/sweetalert2.css">
+    <style media="screen">
+      header, main, footer {
+        padding-left: 300px;
+      }
+
+      @media only screen and (max-width : 992px) {
+          header, main, footer {
+            padding-left: 0;
+          }
+      }
+    </style>
     <title></title>
   </head>
   <body>
     <main>
-  
+      <?php include 'menu_admin.php' ?>
