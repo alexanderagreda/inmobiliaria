@@ -7,4 +7,10 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.26.28/sweetalert2.js"></script>
   <script type="text/javascript">
     $('.sidenav').sidenav();
+
+    //funcion para trasformar a mayusculas
+    function may(obj, id){
+      obj =  obj.toUpperCase();
+      document.getElementById(id).value = obj;
+    }
   </script>
