@@ -131,3 +131,16 @@ $del = $con->query("DELETE FROM mitabla FROM id='' ");
   </body>
 </html>
 """
+  'Input Materialize':
+    'prefix': 'input'
+    'body': """
+    <div class="input-field">
+      <input type="$1" name="$2" title="$3" id="$4">
+      <label for="$5">$6</label>
+    </div>
+"""
+  'Input mayusculas':
+    'prefix': 'may'
+    'body': """
+    onblur="may(this.value, this.id)"
+"""

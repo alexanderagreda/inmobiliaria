@@ -6,7 +6,8 @@
   <!--3. Import sweetalert2.js-->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.26.28/sweetalert2.js"></script>
   <script type="text/javascript">
-    $('.sidenav').sidenav();
+    $('.sidenav').sidenav(); //inicializar sidenav
+     $('select').formSelect(); //inicializar select
 
     //funcion para trasformar a mayusculas
     function may(obj, id){
