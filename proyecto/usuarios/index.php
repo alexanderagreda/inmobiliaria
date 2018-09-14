@@ -7,9 +7,8 @@
             <form class="form" action="ins_usuarios.php" method="post" enctype="multipart/form-data">
               <div class="input-field">
                 <input type="text" name="nick" required autofocus title="Entre 8 y 15 caracteres, solo letras" pattern="[A-Za-z]{8,15}" id="nick" onblur="may(this.value, this.id)">
-                <div class="validacion">
-
-                </div>
+                <label for="nick">Nick</label>
+                <div class="validacion"></div>
               </div>
             </form>
           </div>
@@ -20,11 +19,13 @@
   <script type="text/javascript">
     $('#nick').change(function(){
       $.post('ajax_validacion_nick.php',{
-        nick: $('#nick').value(),
-        beforeSend: function(){
-          $('.validacion').html("Espere un momento");
-        }
-      },)
+          usuario: $('#nick').val(),
+          beforeSend: function(){
+            $('.validacion').html("Espere un momento...");
+          }
+      },function(respuesta){
+        $('.validacion').html(respuesta);
+      });
     });
   </script>
 </body>
