@@ -11,5 +11,5 @@
     }else{
       echo "<label style='color:red;'>" . "Error query: " . mysqli_error($con) ."</label>";
     }
-    $con->close(); //cerrar la conexion
+    $con->close(); //cerrar la conexión
 ?>
