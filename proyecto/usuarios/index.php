@@ -8,29 +8,30 @@
 
               <div class="input-field">
                 <input type="text" name="usuario" required autofocus title="Entre 8 y 15 caracteres, solo letras" pattern="[A-Za-z]{8,15}" id="usuario" onblur="may(this.value, this.id)">
-                <label for="usuario">Usuario</label>
+                <label for="usuario">Usuario *</label>
                 <div class="validacion"></div>
               </div>
 
               <div class="input-field">
                 <input type="password" name="pass1" required title="La contraseña debe contener mayusculas, minusculas y números, entre 8 y 15 caracteres"  pattern="[A-Za-z0-9]{8,15}" id="pass1">
-                <label for="pass1">Contraseña</label>
+                <label for="pass1">Contraseña *</label>
               </div>
 
               <div class="input-field">
                 <input type="password" required title="La contraseña debe contener mayusculas, minusculas y números, entre 8 y 15 caracteres"  pattern="[A-Za-z0-9]{8,15}" id="pass2">
-                <label for="pass2">Verificar contraseña</label>
+                <label for="pass2">Verificar contraseña *</label>
               </div>
 
+              <label for="nivel">Nivel de usuario</label>
               <select name="nivel" required>
-                <option value="" disabled selected>Selecciona un nivel del usuario</option>
+                <option value="" disabled selected>Selecciona una opción</option>
                 <option value="ADMINISTRADOR">ADMINISTRADOR</option>
                 <option value="ASESOR">ASESOR</option>
               </select>
 
               <div class="input-field">
                 <input type="text" name="nombre" required title="Nombre del usuario" id="nombre" onblur="may(this.value, this.id)" pattern="[A-Z/s ]+"><!-- Ingresar solor letras con espacios -->
-                <label for="nombre">Nombre completo del usuario</label>
+                <label for="nombre">Nombre completo del usuario *</label>
               </div>
 
               <div class="input-field">
