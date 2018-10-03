@@ -6,7 +6,6 @@
   if ($_SERVER['REQUEST_METHOD']=='POST') {
     $usuario = $con->real_scape_string(htmlentities($_POST['usuario']));
     $pass1 = $con->real_scape_string(htmlentities($_POST['pass1']));
-    $pass1 = sha1($pass1);  //cifrar contraseña
     $nivel = $con->real_scape_string(htmlentities($_POST['nivel']));
     $nombre->real_scape_string(htmlentities($_POST['nombre']));
     $correo->real_scape_string(htmlentities($_POST['correo']));
@@ -32,7 +31,7 @@
       exit; //detener la ejecucion del codigo
     }
 
-    //Validar nombre completo de usuario usuario solo letras y espacio
+    //Validar nombre completo de usuario solo letras y espacios
     $caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZ ";
     for ($i=0; $i < srtlen($nombre); $i++) {
       $buscar = substr($nombre,$i,1);
@@ -43,7 +42,27 @@
       }
     }
 
+    $nomusuario = srtlen($usuario);
+    $contrasena = srtlen($pass1);
 
+    if ($usuario < 8 || $contrasena > 15) {
+      header('location:../extend/alerta.php?msj=El nombre de usuario debe contener entre 8 y 15 caracteres&c=us&p=in&t=error');
+      exit; //detener la ejecucion del codigo
+    }
+
+    if ($contrasena < 8 || $contrasena >15) {
+      header('location:../extend/alerta.php?msj=La contraseña debe contener entre 8 y 15 caracteres&c=us&p=in&t=error');
+      exit; //detener la ejecucion del codigo
+    }
+
+    //Si el correo no esta vacio realizar la validacion del contenido
+    if (!empty($correo)) {
+      // filter_var — Filtra una variable con el filtro que se indique, si no se cumple retorna false
+      if (!filter_var($correo,FILTER_VALIDATE_EMAIL)) {
+        header('location:../extend/alerta.php?msj=La direccion de correo electrónico no es valida&c=us&p=in&t=error');
+        exit; //detener la ejecucion del codigo
+      }
+    }
 
   }else {
     //redireccionamiento
