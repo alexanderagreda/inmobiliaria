@@ -45,7 +45,7 @@
     $nomusuario = srtlen($usuario);
     $contrasena = srtlen($pass1);
 
-    if ($usuario < 8 || $contrasena > 15) {
+    if ($usuario < 8 || $usuario > 15) {
       header('location:../extend/alerta.php?msj=El nombre de usuario debe contener entre 8 y 15 caracteres&c=us&p=in&t=error');
       exit; //detener la ejecucion del codigo
     }
