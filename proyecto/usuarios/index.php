@@ -4,7 +4,7 @@
         <div class="card">
           <div class="card-content">
             <span class="card-title">Alta de usuarios</span>
-            <form class="form" action="ins_usuarios.php" method="post" enctype="multipart/form-data">
+            <form class="form" action="ins_usuarios.php" method="post" enctype="multipart/form-data"><!-- EL ATRIBUTO ENCTYPE DE LA ETIQUETA FORM: permite el envío de archivos a través de un formulario unicamente con el metodo POST -->
 
               <div class="input-field">
                 <input type="text" name="usuario" required autofocus title="Entre 8 y 15 caracteres, solo letras" pattern="[A-Za-z]{8,15}" id="usuario" onblur="may(this.value, this.id)">
