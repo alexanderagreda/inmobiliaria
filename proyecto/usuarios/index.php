@@ -56,6 +56,62 @@
         </div>
       </div>
     </div>
+
+    <!-- Show data ------------------------------------------------>
+
+    <div class="row">
+      <div class="col s12">
+        <nav class="brown lighten-3">
+          <div class="nav-wrapper">
+            <form>
+              <div class="input-field">
+                <input id="search" type="search" required>
+                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                <i class="material-icons">close</i>
+              </div>
+            </form>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <?php
+      $sel = $con->query("SELECT * FROM usuario ");
+      $row = mysqli_num_rows($sel);
+    ?>
+    <div class="row">
+      <div class="col s12">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">Usuarios (<?php echo $row ?>)</span>
+            <table>
+              <thead>
+                <th>Usuario</th>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Nivel</th>
+                <th>Foto</th>
+                <th>Bloqueo</th>
+                <th></th>
+                <th></th>
+                <?php while($f = $sel->fetch_assoc()){ ?>
+                  <tr>
+                    <td><?php echo $f['usuario'] ?></td>
+                    <td><?php echo $f['nombre'] ?></td>
+                    <td><?php echo $f['correo'] ?></td>
+                    <td><?php echo $f['nivel'] ?></td>
+                    <td>
+                      <img src="<?php echo $f['foto'] ?>" alt="Fotografia" width="50px" alt="Fotografia">
+                    </td>
+                    <td><?php echo $f['bloqueo'] ?></td>
+                  </tr>
+                <?php } ?>
+              </thead>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
   <?php include '../extend/scripts.php'; ?>
   <script type="text/javascript" src="../js/validacion.js"></script>
 </body>

@@ -66,7 +66,7 @@
 
     //Gestion de imagenes
     $extension = '';
-    $ruta = 'foto_pefil';
+    $ruta = 'foto_perfil';
     $archivo = $_FILES['foto']['tmp_name'];
     $nombrearchivo = $_FILES['foto']['name'];
     $info = pathinfo($nombrearchivo);
