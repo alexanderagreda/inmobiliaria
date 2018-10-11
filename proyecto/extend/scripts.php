@@ -14,4 +14,14 @@
       obj =  obj.toUpperCase();
       document.getElementById(id).value = obj;
     }
+    //funcion de filtrado de filas en una tabla
+    $('#buscar').keyup(function(){
+      var contenido = new RegExp($(this).val(), 'i'); //Crea un objeto 'expresión regular' para encontrar un texto de acuerdo a un patrón.
+      $('tr').hide(); // oculta todas las filas
+      $('tr').filter(function(){
+        return contenido.test($(this).text());
+      }).show();
+      $('.cabecera').attr('style','');
+    });
+
   </script>

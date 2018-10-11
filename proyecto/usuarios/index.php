@@ -65,7 +65,7 @@
           <div class="nav-wrapper">
             <form>
               <div class="input-field">
-                <input id="search" type="search" required>
+                <input id="buscar" type="search" required>
                 <label class="label-icon" for="search"><i class="material-icons">search</i></label>
                 <i class="material-icons">close</i>
               </div>
@@ -86,14 +86,16 @@
             <span class="card-title">Usuarios (<?php echo $row ?>)</span>
             <table>
               <thead>
-                <th>Usuario</th>
-                <th>Nombre</th>
-                <th>Correo</th>
-                <th>Nivel</th>
-                <th>Foto</th>
-                <th>Bloqueo</th>
-                <th></th>
-                <th></th>
+                <tr class="cabecera">
+                  <th>Usuario</th>
+                  <th>Nombre</th>
+                  <th>Correo</th>
+                  <th>Nivel</th>
+                  <th>Foto</th>
+                  <th>Bloqueo</th>
+                  <th></th>
+                  <th></th>
+                </tr>
                 <?php while($f = $sel->fetch_assoc()){ ?>
                   <tr>
                     <td><?php echo $f['usuario'] ?></td>
